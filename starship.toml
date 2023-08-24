@@ -1,0 +1,76 @@
+add_newline = false
+
+# Format
+format = """$directory$golang$python$c$lua$fill$time
+$character"""
+
+[character]
+success_symbol = "[󰮯](bold yellow)"
+error_symbol = "[󰮯](bold red)"
+vimcmd_symbol = "[](green)"
+
+# Displays the shell in current use
+[shell]
+disabled = true
+bash_indicator = "  "
+
+[fill]
+symbol = ' '
+#style = 'bold green'
+
+# Displays directory path
+[directory]
+format = '[$path]($style)[$read_only]($read_only_style) '
+read_only = '🔒'
+read_only_style = 'red'
+style = 'bold blue'
+truncation_length = 3
+truncation_symbol = '…/'
+disabled = false
+
+# Time
+[time]
+format = '[\[$time\]]($style) '
+time_format = '%R'
+style = 'bold white'
+time_range = '00:00:00-24:00:00'
+disabled = false
+
+[cmd_duration]
+disabled = true
+
+[c]
+format = 'via [$symbol($version(-$name) )]($style)'
+detect_extensions = ['c', 'h', 'cpp']
+symbol = ' '
+style = 'bold purple'
+
+[lua]
+format = 'via [ $version](bold blue) '
+
+[perl]
+format = 'via [ $version]($style) '
+style = 'bold pink'
+
+[python]
+symbol = ' '
+pyenv_version_name = true
+
+[rust]
+format = 'via [ $version](bold maroon)'
+
+[golang]
+format = 'via [ $version](bold cyan) '
+
+[nodejs]
+format = 'via [󰎙 $version](bold green) '
+
+[username]
+style_user = 'white bold'
+style_root = 'black bold'
+format = 'user: [$user]($style) '
+disabled = true
+show_always = true
+
+
+
